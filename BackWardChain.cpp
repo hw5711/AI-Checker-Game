@@ -333,7 +333,7 @@ void BackWardChain::BackWardChain::start(){
 
             while(element != ""){
                 int locationOfVarlt = checkClauseNum(element);
-                cout<<"location is " << locationOfVarlt<<endl;
+                //cout<<"location is " << locationOfVarlt<<endl;
                 if(locationOfVarlt == -1){ // if meet the observation
                     int ruleNum = getNumOfConslusionList(element);
                     pushIntoConlusionStack(ruleNum, 11*(ruleNum/10 -1) + 1);
@@ -372,17 +372,17 @@ void BackWardChain::BackWardChain::start(){
                         break;
                     }
                 }
-                cout << "map size is :" << conditions.size()<<endl;
+                //cout << "map size is :" << conditions.size()<<endl;
                 var ruleResult = checkKnowledgeBase(r, conditions);
-                cout << "!!!*** " << ruleResult.getStatus() << endl;
+                cout << "*** match rule result:" << ruleResult.getStatus() << " ***"<< endl;
                 if(ruleResult.getStatus() == "true"){
                     if(ruleResult.getName() == "poison"){
-                        cout<<"Find poison "<< ruleResult.getValue()<< endl;
+                        cout<<"Find poison: "<< ruleResult.getValue()<< endl;
                         constaclt.pop();
                         break;
                     }
                     else{// if return observation value then need to set the value into the clause variable list
-                        cout<< "Find observation " << ruleResult.getValue()<< endl;
+                        cout<< "Find observation: " << ruleResult.getValue()<< endl;
                         conlt[(r/10)-1].setC_value(ruleResult.getValue());
                         //cout<<"double check if the observasion value was store: index " << (r/10)-1 << " ," <<conlt[(r/10)-1].getC_value() << endl;
                     }
@@ -451,7 +451,7 @@ var BackWardChain::checkKnowledgeBase(int ruleNum, map<string,string> &vMap){
         if(vMap.size() < 2){
             return res;
         }
-        cout<<"$$$--->"<<vMap.find("observation1")->second <<endl;
+        //cout<<"$$$--->"<<vMap.find("observation1")->second <<endl;
         if( vMap.find("observation1")->second == "increased_anion_gap" &&  vMap.find("ocular_issue")->second =="retinal_hyperemia"){
             res.setStatus("true");
             res.setName("poison");
