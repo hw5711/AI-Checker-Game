@@ -21,7 +21,7 @@ BackWardChain::BackWardChain()
         varlt[4] = v5;
         var v6("skin_issue","NI","");
         varlt[5] = v6;
-        var v7("gastro_iss","NI","");
+        var v7("gastro_issue","NI","");
         varlt[6] = v7;
         var v8("cns_issue","NI","");
         varlt[7] = v8;
@@ -31,217 +31,209 @@ BackWardChain::BackWardChain()
         varlt[9] = v10;
         var v11("fever","NI","");
         varlt[10] = v11;
+        var v12("oral_issue","NI","");
+        varlt[11] = v12;
+        var v13("blood_ca","NI","");
+        varlt[12] = v13;
 
         //initilize conclusion list
-        con c1(10,"observation1","");
+        cond c1(10,"observation1","");
         conlt[0] = c1;
-        con c2(20,"poison","");
+        cond c2(20,"poison","");
         conlt[1] = c2;
-        con c3(30,"poison","");
+        cond c3(30,"poison","");
         conlt[2] = c3;
-        con c4(40,"poison","");
+        cond c4(40,"poison","");
         conlt[3] = c4;
-        con c5(50,"observation2","");
+        cond c5(50,"observation2","");
         conlt[4] = c5;
-        con c6(60,"poison","");
+        cond c6(60,"poison","");
         conlt[5] = c6;
-        con c7(70,"observation3","");
+        cond c7(70,"observation3","");
         conlt[6] = c7;
-        con c8(80,"poison","");
+        cond c8(80,"poison","");
         conlt[7] = c8;
-        con c9(90,"poison","");
+        cond c9(90,"poison","");
         conlt[8] = c9;
-        con c10(100,"observation4","");
+        cond c10(100,"observation4","");
         conlt[9] = c10;
-        con c11(110,"poison","");
+        cond c11(110,"poison","");
         conlt[10] = c11;
-        con c12(120,"observation5","");
+        cond c12(120,"observation5","");
         conlt[11] = c12;
-        con c13(130,"poison","");
+        cond c13(130,"poison","");
         conlt[12] = c13;
-        con c14(140,"observation6","");
+        cond c14(140,"observation6","");
         conlt[13] = c14;
-        con c15(150,"poison","");
+        cond c15(150,"poison","");
         conlt[14] = c15;
-        con c16(160,"observation7","");
+        cond c16(160,"observation7","");
         conlt[15] = c16;
-        con c17(170,"poison","");
+        cond c17(170,"poison","");
         conlt[16] = c17;
-        con c18(180,"observation8","");
+        cond c18(180,"observation8","");
         conlt[17] = c18;
-        con c19(190,"poison","");
+        cond c19(190,"poison","");
         conlt[18] = c19;
-        con c20(200,"observation9","");
+        cond c20(200,"observation9","");
         conlt[19] = c20;
-        con c21(210,"poison","");
+        cond c21(210,"poison","");
         conlt[20] = c21;
-        con c22(220,"observation10","");
+        cond c22(220,"observation10","");
         conlt[21] = c22;
-        con c23(230,"poison","");
+        cond c23(230,"poison","");
         conlt[22] = c23;
-        con c24(240,"poison","");
+        cond c24(240,"poison","");
         conlt[23] = c24;
-        con c25(250,"poison","");
+        cond c25(250,"poison","");
         conlt[24] = c25;
+        cond c26(260,"poison","");
+        conlt[25] = c26;
+        cond c27(270,"poison","");
+        conlt[26] = c27;
+        cond c28(280,"poison","");
+        conlt[27] = c28;
+        cond c29(290,"poison","");
+        conlt[28] = c29;
+        cond c30(300,"poison","");
+        conlt[29] = c30;
 
         //initialize clause variable list
-        for(int i=0; i< 277; i++){
+        for(int i=0; i< 315; i++){
             clvarlt[i] = "";
         }
 
-        clvarlt[1] ="coma";
+        clvarlt[1] ="coma"; //rule 10
         clvarlt[2] ="res_issue";
         clvarlt[3] ="lab_test";
-        clvarlt[12] ="observation1";
+        clvarlt[12] ="observation1";//rule 20
         clvarlt[13] ="ocular_issue";
-        clvarlt[23] ="observation1";
+        clvarlt[23] ="observation1";//rule 30
         clvarlt[24] ="ocular_issue";
         clvarlt[25] ="cardiac_issue";
         clvarlt[26] ="skin_issue";
-        clvarlt[34] ="observation1";
+        clvarlt[34] ="observation1";//rule 40
         clvarlt[35] ="ocular_issue";
         clvarlt[36] ="cardiac_issue";
         clvarlt[37] ="skin_issue";
-        clvarlt[45] ="coma";
+        clvarlt[45] ="coma";//rule 50
         clvarlt[46] ="res_issue";
         clvarlt[47] ="ocular_issue";
         clvarlt[48] ="lab_test";
-        clvarlt[56] ="observation2";
-        clvarlt[57]="cardiac_issue";
-        clvarlt[67] = "coma";
+        clvarlt[56] ="observation2";//rule 60
+        clvarlt[57] = "cardiac_issue";
+        clvarlt[67] = "coma"; //rule 70
         clvarlt[68] = "cardiac_issue";
         clvarlt[69] = "ocular_issue";
         clvarlt[70] = "skin_issue";
         clvarlt[71] = "lab_test";
-        clvarlt[78] = "observation3";
+        clvarlt[78] = "observation3";//rule 80
         clvarlt[79] = "res_issue";
-        clvarlt[89] = "observation3";
+        clvarlt[89] = "observation3";//rule 90
         clvarlt[90] = "res_issue";
         clvarlt[91] = "cns_issue";
-        clvarlt[100] = "coma";
+        clvarlt[100] = "coma";//rule 100
         clvarlt[101] = "cardiac_issue";
         clvarlt[102] = "ocular_issue";
         clvarlt[103] = "res_issue";
         clvarlt[104] = "lab_test";
-        clvarlt[111] = "observation4";
+        clvarlt[111] = "observation4";//rule 110
         clvarlt[112] = "skin_issue";
         clvarlt[113] = "gastro_issue";
-        clvarlt[122] = "coma";
+        clvarlt[122] = "coma";//rule 120
         clvarlt[123] = "cardiac_issue";
         clvarlt[124] = "oral_issue";
         clvarlt[125] = "lab_test";
-        clvarlt[133] = "observation5";
+        clvarlt[133] = "observation5";//rule 130
         clvarlt[134] = "cns_issue";
-        clvarlt[144] = "coma";
+        clvarlt[144] = "coma";//rule 140
         clvarlt[145] = "cardiac_issue";
         clvarlt[146] = "ocular_issue";
         clvarlt[147] = "lab_test";
-        //clvarlt[155] = "observation";
-        clvarlt[155] = "observation6";
+        clvarlt[155] = "observation6";//rule 150
         clvarlt[156] = "oral_issue";
         clvarlt[157] = "cns_issue";
-        clvarlt[166] = "coma";
+        clvarlt[166] = "coma";//rule 160
         clvarlt[167] = "cardiac_issue";
         clvarlt[168] = "gastro_issue";
-        clvarlt[179] = "lab_test";
-        clvarlt[177] = "observation7";
-        clvarlt[179] = "res_issue";
-        clvarlt[180] = "cns_issue";
-        clvarlt[188] = "coma";
+        clvarlt[169] = "lab_test";
+        clvarlt[177] = "observation7";//rule 170
+        clvarlt[178] = "res_issue";
+        clvarlt[179] = "cns_issue";
+        clvarlt[188] = "coma";//rule 180
         clvarlt[189] = "cardiac_issue";
         clvarlt[190] = "gastro_issue";
         clvarlt[191] = "lab_test";
-        clvarlt[199] = "observation8";
+        clvarlt[199] = "observation8";//rule 190
         clvarlt[200] = "oral_issue";
         clvarlt[201] = "cns_issue";
-        clvarlt[210] = "coma";
+        clvarlt[210] = "coma";//rule 200
         clvarlt[211] = "cardiac_issue";
         clvarlt[212] = "gastro_issue";
         clvarlt[213] = "blood_ca";
         clvarlt[214] = "lab_test";
-        clvarlt[221] = "observation9";
+        clvarlt[221] = "observation9";//rule 210
         clvarlt[222] = "liver_issue";
-        clvarlt[232] = "coma";
+        clvarlt[232] = "coma";//rule 220
         clvarlt[233] = "cardiac_issue";
         clvarlt[234] = "gastro_issue";
         clvarlt[235] = "blood_ca";
         clvarlt[236] = "lab_test";
-        clvarlt[243] = "observation10";
+        clvarlt[243] = "observation10";//rule 230
         clvarlt[244] = "liver_issue";
-        clvarlt[254] = "coma";
+        clvarlt[254] = "coma";//rule 240
         clvarlt[255] = "cardiac_issue";
         clvarlt[256] = "gastro_issue";
         clvarlt[257] = "oral_issue";
         clvarlt[258] = "fever";
-        clvarlt[265] = "coma";
+        clvarlt[265] = "coma";//rule 250
         clvarlt[266] = "cardiac_issue";
         clvarlt[267] = "gastro_issue";
         clvarlt[268] = "skin_issue";
         clvarlt[269] = "res_issue";
         clvarlt[270] = "cns_issue";
-
-        /*
-        clvarlt[156] = "observation6";
-        clvarlt[157] = "oral_issue";
-        clvarlt[158] = "cns_issue";
-        clvarlt[167] = "coma";
-        clvarlt[168] = "cardiac_issue";
-        clvarlt[169] = "gastro_issue";
-        clvarlt[170] = "lab_test";
-        clvarlt[178] = "observation";
-        clvarlt[179] = "res_issue";
-        clvarlt[180] = "cns_issue";
-        clvarlt[189] = "coma";
-        clvarlt[190] = "cardiac_issue";
-        clvarlt[191] = "gastro_issue";
-        clvarlt[192] = "lab_test";
-        clvarlt[200] = "observation";
-        clvarlt[201] = "oral_issue";
-        clvarlt[202] = "cns_issue";
-        clvarlt[211] = "coma";
-        clvarlt[212] = "cardiac_issue";
-        clvarlt[213] = "gastro_issue";
-        clvarlt[214] = "blood_ca";
-        clvarlt[215] = "lab_test";
-        clvarlt[222] = "observation";
-        clvarlt[223] = "liver_issue";
-        clvarlt[233] = "coma";
-        clvarlt[234] = "cardiac_issue";
-        clvarlt[235] = "gastro_issue";
-        clvarlt[236] = "blood_ca";
-        clvarlt[237] = "lab_test";
-        clvarlt[244] = "observation";
-        clvarlt[245] = "liver_issue";
-        clvarlt[255] = "coma";
-        clvarlt[256] = "cardiac_issue";
-        clvarlt[257] = "gastro_issue";
-        clvarlt[258] = "oral_issue";
-        clvarlt[259] = "fever";
-        clvarlt[266] = "coma";
-        clvarlt[267] = "cardiac_issue";
-        clvarlt[268] = "gastro_issue";
-        clvarlt[269] = "skin_issue";
-        clvarlt[270] = "res_issue";
-        clvarlt[271] = "cns_issue";
-        */
-
+        clvarlt[276] = "coma";//rule 260
+        clvarlt[277] = "cardiac_issue";
+        clvarlt[278] = "gastro_issue";
+        clvarlt[279] = "skin_issue";
+        clvarlt[280] = "ocular_issue";
+        clvarlt[287] = "coma";//rule 270
+        clvarlt[288] = "cardiac_issue";
+        clvarlt[289] = "gastro_issue";
+        clvarlt[290] = "res_issue";
+        clvarlt[291] = "skin_issue";
+        clvarlt[298] = "coma";//rule 280
+        clvarlt[299] = "cardiac_issue";
+        clvarlt[300] = "gastro_issue";
+        clvarlt[301] = "liver_issue";
+        clvarlt[302] = "cns_issue";
+        clvarlt[309] = "coma";//rule 290
+        clvarlt[310] = "cardiac_issue";
+        clvarlt[311] = "gastro_issue";
+        clvarlt[312] = "skin_issue";
+        clvarlt[313] = "ocular_issue";
+        clvarlt[314] = "res_issue";
+        clvarlt[320] = "coma";//rule 300
+        clvarlt[321] = "cardiac_issue";
+        clvarlt[322] = "gastro_issue";
+        clvarlt[323] = "skin_issue";
+        clvarlt[324] = "res_issue";
+        clvarlt[325] = "ocular_issue";
 
 }
 
 void BackWardChain::pushIntoConlusionStack(int rulesNum, int clauseNum){
     constack temp (rulesNum, clauseNum);
     constaclt.push(temp);
-    //cout << "stack size is " << constaclt.size() << endl;
 }
 
 //returns location of the varable list , if not there return -1;
 int BackWardChain::checkClauseNum(string n){
-    //cout << "go into checkClauseNum function " << n << endl;
-    for(int i=0; i< 11; i++){
-        //cout<<"variable index " << i << " name is " << varlt[i].getName()<<endl;
+
+    for(int i=0; i< 13; i++){
         if(varlt[i].getName() == n){
             if(varlt[i].getStatus() == "NI"){
-                cout << "Please enter answer of "<< varlt[i].getName();
+                cout << "Please enter answer of "<< varlt[i].getName()<< " :   ";
                 string data;
                 cin >> data;
                 varlt[i].setValue(data);
@@ -255,45 +247,22 @@ int BackWardChain::checkClauseNum(string n){
 
 //get rule number of the observation
 int BackWardChain::getNumOfConslusionList(string n){
-    //cout << "check conclusion list of : " << n <<" ,to return rule number "<< endl;
-    for(int i=0; i<25; i++){
+
+    for(int i=0; i<30; i++){
         if(conlt[i].getC_name() == n){
-            //cout << " rule number is : "<<conlt[i].getR_num() <<endl;
             return conlt[i].getR_num();
         }
     }
     return -1;
 }
 
-//assign value to variable
-void BackWardChain::assignStatus(string n){
-    for(int i=0; i<11; i++){
-    //for(var i : varlt){
-       if(varlt[i].getName() == n){
-           //cout << "***" << varlt[i].getName() << " -- " << n << endl;
-            //cout << "status is " << varlt[i].getStatus()<<endl;
-            if(varlt[i].getStatus() == "NI"){
-                cout << "Please enter answer of "<< varlt[i].getName() << ":  ";
-                string data;
-                cin >> data;
-                varlt[i].setValue(data);
-                varlt[i].setStatus("I");
-            }
-        break;
-        }
-    }
-}
-
-
 string BackWardChain::getVariableListValue(string n){
     bool found = true;
-    //cout <<"go into the getVariableListValue\n";
     string res = "";
-    for(int i=0; i<11; i++){
-   // for(var i: varlt){
+    for(int i=0; i<13; i++){
         if(varlt[i].getName() == n){
                 if(varlt[i].getStatus() == "NI"){
-                cout << "Please enter answer of "<< varlt[i].getName() << ":  ";
+                cout << "Please enter answer of  "<< varlt[i].getName() << " :   ";
                 string data;
                 cin >> data;
                 varlt[i].setValue(data);
@@ -304,66 +273,52 @@ string BackWardChain::getVariableListValue(string n){
                     return varlt[i].getValue();
                 }
         }
-  //      found == false;
     }
-    //check the value in the conclusion list
-    //if(found == false){
-        for(int j=0; j<25; j++){
+
+        for(int j=0; j<30; j++){
             if(conlt[j].getC_name() == n){
                 return conlt[j].getC_value();
             }
         }
-    //}
-   // return res;
+
 }
 
 //check NI status and set values
 void BackWardChain::BackWardChain::start(){
-    for(con conlusion : conlt){
-        //cout <<" conclusion num is :"<< conclusion.getR_num() <<endl;
-        //cout << "conclusion name is :" << conlusion.getC_name() <<endl;
-        if(conlusion.getC_name() == "poison"){
-            int ruleNumTemp = conlusion.getR_num();
+
+    for(int i = 0; i<30; i++){
+        if(conlt[i].getC_name() == "poison"){
+            int ruleNumTemp = conlt[i].getR_num();
+            cout << " rule num is "<< ruleNumTemp << endl;
             int clauseNumTemp = 11*(ruleNumTemp/10 -1) + 1;
+
             pushIntoConlusionStack(ruleNumTemp, clauseNumTemp);
-            //cout<<"1. stack size is :"<< constaclt.size()<<endl;
-            //check if all values in the clause variable list
             string element = clvarlt[clauseNumTemp];
-            //cout<<"clause is :"<< element <<endl;
 
             while(element != ""){
                 int locationOfVarlt = checkClauseNum(element);
-                //cout<<"location is " << locationOfVarlt<<endl;
                 if(locationOfVarlt == -1){ // if meet the observation
                     int ruleNum = getNumOfConslusionList(element);
                     pushIntoConlusionStack(ruleNum, 11*(ruleNum/10 -1) + 1);
-                    //cout<<"2. stack size is :"<< constaclt.size()<<endl;
                     break;
                 }
                 else{//if meet the condition
-                    //check if it's value "NI", and set value
-                    //cout<<"assign value at location "<<locationOfVarlt <<endl ;
-                    //cout<< "name is "<< clvarlt[locationOfVarlt] <<endl;
-                    assignStatus(clvarlt[locationOfVarlt]);
                     clauseNumTemp++;
                     element = clvarlt[clauseNumTemp];
-                    //cout<<"clause index is :"<< clauseNumTemp <<endl;
                 }
             }
             //then need to check the knowledge base with rule number
             //pass temp value array with name and values  return two
-            //use a function to save all conditon and it's value in to temp object
-            //cout<<"3. stack size is :"<< constaclt.size()<<endl;
             while(constaclt.size() != 0){
                 constack topStack = constaclt.top();
                 constaclt.pop();
                 int r = topStack.getR_num();
                 int c = topStack.getCl_num();
+                cout <<" rule number is: "<< r << endl;
 
                 map<string,string> conditions;
                 for(int i=c; i<c+11; i++){
                     string s = clvarlt[i];
-                    //cout << "!!! to chekech value " << s << endl;
                     if(s != ""){
                         string v = getVariableListValue(s);
                         conditions.insert(pair<string,string>(s, v));
@@ -372,7 +327,6 @@ void BackWardChain::BackWardChain::start(){
                         break;
                     }
                 }
-                //cout << "map size is :" << conditions.size()<<endl;
                 var ruleResult = checkKnowledgeBase(r, conditions);
                 cout << "*** match rule result:" << ruleResult.getStatus() << " ***"<< endl;
                 if(ruleResult.getStatus() == "true"){
@@ -384,7 +338,6 @@ void BackWardChain::BackWardChain::start(){
                     else{// if return observation value then need to set the value into the clause variable list
                         cout<< "Find observation: " << ruleResult.getValue()<< endl;
                         conlt[(r/10)-1].setC_value(ruleResult.getValue());
-                        //cout<<"double check if the observasion value was store: index " << (r/10)-1 << " ," <<conlt[(r/10)-1].getC_value() << endl;
                     }
                 }
                 else{//rule is false
@@ -421,7 +374,7 @@ bool BackWardChain::isInVariableList(string v){
         }
     }
 
-    for(con j : conlt){
+    for(cond j : conlt){
         if(j.getC_name() == v)
             return false;
     }
@@ -751,7 +704,7 @@ var BackWardChain::checkKnowledgeBase(int ruleNum, map<string,string> &vMap){
             return res;
         }
         if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
-           &&  vMap.find("gastro_issue")->second == "vomiting" &&  vMap.find("skin_issue")->second == "reddening skin"
+           &&  vMap.find("gastro_issue")->second == "vomiting" &&  vMap.find("skin_issue")->second == "reddening_skin"
            &&  vMap.find("res_issue")->second == "breathing_issue" &&  vMap.find("cns_issue")->second == "peripheral_neuropathy"){
             res.setStatus("true");
             res.setName("poison");
@@ -759,6 +712,78 @@ var BackWardChain::checkKnowledgeBase(int ruleNum, map<string,string> &vMap){
             return res;
         }
     }
+
+
+    if(ruleNum == 260){//Rule# 260
+        if(vMap.size() < 5){
+            return res;
+        }
+        if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
+           && vMap.find("gastro_issue")->second == "vomiting" &&  vMap.find("skin_issue")->second == "skin_irritation_and_burn"
+           &&  vMap.find("ocular_issue")->second == "corneal_ulceration"){
+            res.setStatus("true");
+            res.setName("poison");
+            res.setValue("formaldehyde");
+            return res;
+        }
+    }
+
+    if(ruleNum == 270){//Rule# 270
+        if(vMap.size() < 5){
+            return res;
+        }
+        if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
+           && vMap.find("gastro_issue")->second == "loss_of_apperite" &&  vMap.find("res_issue")->second == "breathing_issue"
+           &&  vMap.find("skin_issue")->second == "clubbing_of_toes_and_fingertips"){
+            res.setStatus("true");
+            res.setName("poison");
+            res.setValue("asbestos");
+            return res;
+        }
+    }
+
+    if(ruleNum == 280){//Rule# 280
+        if(vMap.size() < 5){
+            return res;
+        }
+        if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
+           && vMap.find("gastro_issue")->second == "nausea" &&  vMap.find("liver_issue")->second == "heparic_toxity"
+           &&  vMap.find("cns_issue")->second == "seizure"){
+            res.setStatus("true");
+            res.setName("poison");
+            res.setValue("endosulfan");
+            return res;
+        }
+    }
+
+    if(ruleNum == 290){//Rule# 290
+        if(vMap.size() < 6){
+            return res;
+        }
+        if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
+           && vMap.find("gastro_issue")->second == "vomiting" &&  vMap.find("skin_issue")->second == "stinging_pain_and_redness"
+           &&  vMap.find("ocular_issue")->second == "conjuctivities" &&  vMap.find("res_issue")->second == "bronchospasm"){
+            res.setStatus("true");
+            res.setName("poison");
+            res.setValue("sulfur_oxide");
+            return res;
+        }
+    }
+
+    if(ruleNum == 300){//Rule# 300
+        if(vMap.size() < 6){
+            return res;
+        }
+        if( vMap.find("coma")->second == "no" &&  vMap.find("cardiac_issue")->second == "normal"
+           && vMap.find("gastro_issue")->second == "vomiting" &&  vMap.find("skin_issue")->second == "excessive_sweating"
+           && vMap.find("res_issue")->second == "breathing_issue" &&  vMap.find("ocular_issue")->second == "dilated_pupil"){
+            res.setStatus("true");
+            res.setName("poison");
+            res.setValue("tetrodotoxin");
+            return res;
+        }
+    }
+
     cout<<"*** not match any rules ***\n";
     return res;
 }

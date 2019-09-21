@@ -1,9 +1,9 @@
-#ifndef CON_H
-#define CON_H
+#ifndef COND_H
+#define COND_H
 #include <string>
 using namespace std;
 
-class con
+class cond
 {
     private:
          int r_num;
@@ -11,13 +11,13 @@ class con
          string c_value;
 
     public:
-        con(){
+        cond(){
             r_num = 0;
             c_name = "";
             c_value = "";
         }
 
-        con(int r,string c, string v){
+        cond(int r,string c, string v){
             r_num = r;
             c_name = c;
             c_value = v;
