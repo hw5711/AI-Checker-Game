@@ -1,7 +1,5 @@
 #ifndef CONSTACK_H
 #define CONSTACK_H
-
-
 class constack
 {
     private:

@@ -2,7 +2,6 @@
 #define COND_H
 #include <string>
 using namespace std;
-
 class cond
 {
     private:

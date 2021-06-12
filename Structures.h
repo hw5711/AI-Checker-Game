@@ -2,7 +2,6 @@
 #define STRUCTURES_H
 #include <iostream>
 //using namespace std;
-
 class Structures{
 
     private:
